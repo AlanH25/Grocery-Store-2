@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+		<link rel="icon" href="images/apple.png">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<title>Generic Grocery Store</title>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<ul class="tab">
+  <!img class ="logo" src="images/leaf-logo.png" alt="leaf" width="50" height="50">
+  
+    <li><button class="tablinks" onclick="openInfo(event, 'Client')"><h4>Filter Selction</h4></button></li>
+
+  
+  <li><button class="tablinks" onclick="openInfo(event, 'Products');populateListProductChoices('Vegatarian', 'displayProduct', 'Organic', 'Gluten')"><h4>View Products </h4></button></li>
+
+  
+  <li><button class="tablinks" onclick="openInfo(event, 'Cart')"> <h4>Your Cart</h4></button></li>
+
+ 
+</ul>
+
+
+<h1>Generic Grocery Store</h1>
+	<h2>Welcome to Generic Grocery Store's official webpage!</h2>	
+	<br>
+
+	<img class = "imageBorder" src="images/Food.png" alt="groceries" width="810" height="389">
+
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+<br>
+  <h2>Filter Your Product Choices</h2>
+	<h3>Select any of the following to view only those types of products:</h3>
+	
+	<input type="checkbox" name="vegatarian" id="Vegatarian" onchange="populateListProductChoices(this.id, 'displayProduct', 'Organic', 'Gluten')"> <label for="checkbox">Vegatarian</label></input>
+	
+	<input type="checkbox" name="oraganic" id="Organic" onchange="populateListProductChoices('Vegatarian', 'displayProduct', this.id, 'Gluten')"> <label for="checkbox">Organic</label></input>
+	
+	<input type="checkbox" name="gluten" id="Gluten" onchange="populateListProductChoices('Vegatarian', 'displayProduct', 'Organic', this.id)"> <label for="checkbox">Gluten-Free</label></input>
+	
+	
+	<br>
+	<br>
+
+
+	
+</div>
+
+
+<div id="Products" class="tabcontent">
+<br>
+  <h2>Available Products</h2>
+ 
+	  
+	  	 <br>
+
+	  
+	 <div id="product-category">
+	 
+		<input type="radio" id="all" name="category" value="" checked="checked"  onClick="populateListProductChoices('Vegatarian', 'displayProduct', 'Organic', 'Gluten', this.value)">
+		<label for="all" class>All</label>
+	 
+		<input type="radio" id="veggies" name="category" value="Fruit" onClick="populateListProductChoices('Vegatarian', 'displayProduct', 'Organic', 'Gluten', this.value)">
+		<label for="veggies" class>Fruits/Vegatables</label>
+
+		<input type="radio" id="grains" name="category" value="Grains" onClick="populateListProductChoices('Vegatarian', 'displayProduct', 'Organic', 'Gluten', this.value)">
+		<label for="grain" class>Grains</label>
+		
+		<input type="radio" id="grains" name="category" value="Dairy" onClick="populateListProductChoices('Vegatarian', 'displayProduct', 'Organic', 'Gluten', this.value)">
+		<label for="dairy" class>Dairy</label>
+		
+		<input type="radio" id="drinks" name="category" value="Drinks" onClick="populateListProductChoices('Vegatarian', 'displayProduct', 'Organic', 'Gluten', this.value)">
+		<label for="drinks" class>Drinks</label>
+		
+		<input type="radio" id="meat" name="category" value="Meat" onClick="populateListProductChoices('Vegatarian', 'displayProduct', 'Organic', 'Gluten', this.value)">
+		<label for="meat" class>Meat</label>
+		
+		<input type="radio" id="prod" name="category" value="Product" onClick="populateListProductChoices('Vegatarian', 'displayProduct', 'Organic', 'Gluten', this.value)">
+		<label for="prod" class>Cooking Products</label>
+		
+		
+		
+		<br>	<br>
+		
+		 <h3 id = "test">Here are the available products that are filtered based on your selections and catagories</h3>
+	  
+		 <h3>Choose items to buy:</h3>
+		
+		
+	</div>
+	 <br>
+
+	
+	
+	
+	
+	  
+	 <div id="displayProduct"></div>
+	 <br>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">Add selected items to cart</button>
+	 <br>
+
+	<br>
+
+</div>
+
+<div id="Cart" class="tabcontent">
+<br>
+  <h2>Your Cart</h2>
+  <h3>Here are the items that you added to your cart:</h3>
+  <div id="displayCart" class="displayCart"></div>
+  	<br>
+
+	<br>
+
+</div>
+
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+<div class = "footer">
+	<p class = "sig" >Site created by Alan Harris</p>	
+</div>
+
+</body>
+</html>

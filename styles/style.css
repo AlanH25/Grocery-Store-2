@@ -1,0 +1,221 @@
+/* This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp> */
+body{
+	background-image: url('../images/yellow-bg.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover; 
+
+}
+
+h1 {
+	font-family:'Lalezar';
+    font-size: 80px;
+    color: #1d3557;
+	text-align: center;
+	margin: 0;
+	padding: 100px 0 0 0;
+}
+
+
+h2 {
+	font-family:'Signika', sans-serif;
+    font-size: 50;
+	font-weight: 700;
+    color: #1d3557;
+	text-align: center;
+	margin: 0;
+}
+
+h3 {
+	font-family: 'Varela Round', sans-serif;
+    font-size: 15px;
+    color: #457b9d;
+	text-align: left;
+	
+	
+}
+
+h4{
+	font-size: 20px;
+	font-family: 'Varela Round',sans-serif;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  float: right;
+  clear: left
+}
+
+
+.imageBorder {
+    border:10px solid #fffcfc;
+	align: center;
+    border-radius: 25px;
+	-webkit-transition: 1s;
+    transition: 0.3s;
+}
+
+.imageBorder2 {
+    border:5px solid #69cbcf;
+	align: center;
+    border-radius: 25px;
+	-webkit-transition: 1s;
+    transition: 0.3s;
+}
+
+.line{
+	border:3px solid #69cbcf;
+	width: 100%;
+    border-radius: 25px;
+}/*
+.imageBorder:hover {
+    border:10px solid #a8dadc;
+    border-radius: 10px;
+    -webkit-transition: 1s;
+    transition: 0.3s;
+}
+*/
+
+p{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 15px;
+    color: #457b9d;
+	text-align: left;
+}
+
+displayCart{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 15px;
+    color: #457b9d;
+	text-align: left;
+}
+
+label{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 15px;
+    color: #457b9d;
+	text-align: left;
+}
+
+p.sig{
+	font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
+    color: #457b9d;
+	text-align: right;
+}
+
+.footer {
+	float:bottom;
+	padding-right: 30px;
+	position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+	
+}
+
+
+.logo{
+	display: block;
+	margin: 0 auto;
+	float: left;
+	clear: left;
+}
+
+/* Style the tab */
+.tab {
+  z-index: 3;
+  position: fixed;
+    top: 0;
+    margin: 0 auto;
+	left: -5px;
+	width: 100.5%;
+    padding: 0;
+  overflow: hidden;
+  background-color: #69cbcf;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: #69cbcf;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 250px;
+  transition: 0.3s;
+  color: white;
+   border-radius: 15px;
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: white;
+  color: #69cbcf;
+   border-radius: 25px;
+  
+
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: white;
+   border-radius: 25px;
+  color: #1d3557;
+
+}
+
+ul.tab {
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.tab li {
+  display: inline;
+  font-size: 18px;
+}
+
+ul.tab li+li:before {
+  padding: 8px;
+  color: white;
+  font-size: 20px;
+  font-family: 'Varela Round',sans-serif;
+  content: ">\00a0";
+}
+
+/* Style the tab content */
+.tabcontent {
+	 border-radius: 25px;
+  display: none;
+  padding-left: 25px;
+  border-top: none;
+   background-color: white
+}
+
+
+.block {
+  display: block;
+  width: 50%;
+  border-radius: 20px;
+  background-color: #69cbcf; 
+  padding: 14px 28px;
+  font-size: 16px;
+	font-family: 'Varela Round',sans-serif;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  -webkit-transition: 1s;
+  transition: 0.3s;
+
+}
+
+.block:hover {
+  background-color: #fff; 
+  color: #69cbcf;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: 1s;
+   transition: 0.3s;
+}

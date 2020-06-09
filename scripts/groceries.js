@@ -65,7 +65,7 @@ var products = [
 	},
 	
 	{
-		name: "Rease's Puffs",
+		name: "Reese's Puffs",
 		vegetarian: true,
 		glutenFree: true,
 		price: 3.99,
@@ -126,7 +126,7 @@ var products = [
 		glutenFree: false,
 		price: 4.20,
 		organic: false,
-		category: "Grain",
+		category: "Grains",
 		img: "images/spaghetti.png"
 	},
 	{
